@@ -17,11 +17,11 @@ export class MovieService {
   }
 
   findAll() {
-    return `This action returns all movie`;
+    return this.repository.find();
   }
 
   update(id: number, updateMovieDto: UpdateMovieDto) {
-    throw new NotImplementedException();
+    return this.repository.update(id, updateMovieDto);
   }
 
 }
